@@ -15,7 +15,7 @@ def replace_and_count(line, replacements):
     
     for key, value in replacements.items():
         line = line.replace(key, value)
-        total_replaced += original_line.count(key)
+        total_replaced += original_line.count(key) * len(key)
     
     return line, total_replaced
 
